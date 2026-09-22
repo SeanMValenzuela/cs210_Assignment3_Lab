@@ -27,8 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c78a2f4-9345-4e2b-9d77-fae6bb42b481" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/REFLECTION.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REFLECTION.md" beforeDir="false" afterPath="$PROJECT_DIR$/REFLECTION.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,15 +87,23 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="untitled1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled1" TARGET_NAME="untitled1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled1" RUN_TARGET_NAME="untitled1">
+    <configuration name="cs210_Assignment3_Lab" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled1" TARGET_NAME="untitled1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled1" RUN_TARGET_NAME="untitled1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
   <component name="SelectedDebugProfileService"><![CDATA[{
-  "profileIdByStamp": [],
-  "modificationCount": 4
+  "profileIdByStamp": [
+    {
+      "first": {
+        "##RUN_CONFIGURATION##": "CMake Application.cs210_Assignment3_Lab",
+        "cmake": "CMakeBuildProfile:Debug"
+      },
+      "second": "ae39021f-2d05-42ba-9b6f-aa627d225cac"
+    }
+  ],
+  "modificationCount": 5
 }]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
