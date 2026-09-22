@@ -5,71 +5,54 @@
 # pragma once
 
 #include <iostream>
+#include "List.h"
 using namespace std;
 
 template <typename T>
-class ArrayList {
+class ArrayList : public List<T> {
 public:
-    ArrayList(): size(0) {
-
-    }
-    void add(T item) {
-        if (size >= CAPACITY) {
-            cout<<"Array is full"<<endl;
+    void addFront(T* value) override {
+        if (size_ >= CAPACITY) {
+            std::cout << "ArrayList is full." << std::endl;
             return;
         }
-        for (int i = size; i > 0; i--) {
-            data[i] = data[i - 1];
+        for (int i = size_; i > 0; --i) {
+            data_[i] = data_[i - 1];
         }
-        data[0] = item;
-        size++;
+        data_[0] = value;
+        ++size_;
     }
-    void deleteFront() {
-        if (size == 0) {
-            cout<<"Array is empty"<<endl;
+    void deleteFront() override {
+        if (size_ == 0) {
+            std::cout << "ArrayList is empty." << std::endl;
             return;
         }
-        for (int i = 0; i < size - 1; i++) {
-            data[i] = data[i + 1];
+        delete data_[0];
+        for (int i = 0; i < size_ - 1; ++i) {
+            data_[i] = data_[i + 1];
         }
-        size--;
+        --size_;
     }
-    bool search(T item) {
-        if (size == 0) {
-            cout<<"Array is empty"<<endl;
-            return false;
-        }
-        for (int i = 0; i < size; i++) {
-            if (data[i] == item) {
-                return true;
-            }
+    bool search(T* value) const override {
+        for (int i = 0; i < size_; ++i) {
+            if (*data_[i] == *value) return true;
         }
         return false;
     }
-    void printArray() {
-        for (int i = 0; i < size; i++) {
-            cout << data[i] << ",";
+    void print() const override {
+        for (int i = 0; i < size_; ++i) {
+            std::cout << *data_[i] << ",";
         }
-        cout << endl;
+        std::cout << std::endl;
     }
-    // TODO: ADD addToBack and deleteFromBack
-    void addToBack(T item) {
-        if (size >= CAPACITY) {
-            cout<<"Array is full"<<endl;
-            return;
+    ~ArrayList() override {
+        for (int i = 0; i < size_; ++i) {
+            delete data_[i];
         }
-        data[size] = item;
-        size++;
     }
-    void deleteFromBack() {
-        if (size == 0) {
-            cout<<"Array is empty"<<endl;
-            return;
-        }
-        size--;
-    }
+
 private:
     static const int CAPACITY = 20;
-    T data[CAPACITY];
-    int size;
+    T* data_[CAPACITY];
+    int size_;
 };
